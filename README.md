@@ -73,7 +73,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Entrenamiento
+## Entrenamiento y Persistencia
 ```bash
 python training/train_abandono.py
 python training/train_costo_reparacion.py
@@ -92,4 +92,4 @@ Pruebe ambos endpoints con la documentación de FastApi o Postman:
 - Postman: Importe la colección postman: `prediccion_seguros_vehiculares.postman_collection.json` 
 
 ## Conclusión
-Ambos casos comparten el ciclo **Datos -> Preparación -> Entrenamiento -> Evaluación -> Pipeline -> Persistencia -> API -> Docker -> Inferencia**, pero responden preguntas distintas: una clase probable frente a un valor numérico estimado.
+Ambos casos comparten el ciclo **Datos -> Preparación -> Entrenamiento -> Persistencia -> API -> Docker -> Inferencia**, pero responden preguntas distintas: una clase probable frente a un valor numérico estimado.
