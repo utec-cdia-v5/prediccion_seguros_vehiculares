@@ -70,6 +70,8 @@ Ambos CSV contienen **exactamente 1,000 registros ficticios**:
 Ingresa a MV Desarrollo en su cuenta de AWS Academy.
 
 ```bash (MV Linux)
+git clone https://github.com/utec-cdia-v5/prediccion_seguros_vehiculares.git
+cd prediccion_seguros_vehiculares
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
