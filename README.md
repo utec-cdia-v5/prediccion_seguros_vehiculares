@@ -67,6 +67,8 @@ Ambos CSV contienen **exactamente 1,000 registros ficticios**:
 - `siniestros_costos.csv` usa antigüedad/valor del vehículo, severidad, tipo de siniestro, piezas, grúa y combustible.
 
 ## Preparación
+Ingresa a MV Desarrollo en su cuenta de AWS Academy.
+
 ```bash (MV Linux)
 python3 -m venv .venv
 source .venv/bin/activate
