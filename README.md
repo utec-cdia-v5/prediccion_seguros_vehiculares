@@ -82,14 +82,16 @@ Cada script hace `train_test_split` 80/20. El clasificador usa un Pipeline con e
 
 Se generan los modelos ya entrenados: `models/modelo_abandono.joblib`, `models/modelo_costo_reparacion.joblib` y JSON con métricas.
 
-## Docker
+## API (Docker)
 ```bash
 docker build -t prediccion_seguros_vehiculares:1.0 .
 docker run -d --rm --name prediccion_seguros_vehiculares_c -p 8000:8000 prediccion_seguros_vehiculares:1.0
 ```
+
+## Predicción
 Pruebe ambos endpoints con la documentación de FastApi o Postman:
 - Documentación FastApi en Swagger: `http://IP_Pública_MV:8000/docs` (Abra el puerto 8000 en MV de ser necesario)
 - Postman: Importe la colección postman: `prediccion_seguros_vehiculares.postman_collection.json` 
 
 ## Conclusión
-Ambos casos comparten el ciclo **Datos -> Preparación -> Entrenamiento -> Persistencia -> API -> Docker -> Inferencia**, pero responden preguntas distintas: una clase probable frente a un valor numérico estimado.
+Ambos casos comparten el ciclo **Datos -> Preparación -> Entrenamiento -> Persistencia -> API (Docker) -> Predicción**, pero responden preguntas distintas: una clase probable frente a un valor numérico estimado.
